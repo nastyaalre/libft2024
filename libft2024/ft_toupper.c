@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalremei <aalremei@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 14:04:11 by aalremei          #+#    #+#             */
-/*   Updated: 2024/12/20 17:07:26 by aalremei         ###   ########.fr       */
+/*   Created: 2024/12/20 16:54:09 by aalremei          #+#    #+#             */
+/*   Updated: 2024/12/20 17:09:56 by aalremei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_toupper(int c)
 {
-	if (((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
-		return (1);
-	return (0);
+	if (c >= 97 && c <= 122)
+		c = c - 32;
+	return (c);
 }
-
 /*
 int	main(void)
 {
-	char	c = 'd';
-	printf("%d\n", ft_isalpha(c));
-	return (0);
+	char	c;
+
+	c = '2';
+//	printf("From '%c' to new '%c'", c, toupper(c));
+	printf("From '%c' to new '%c'", c, ft_toupper(c));
 }*/

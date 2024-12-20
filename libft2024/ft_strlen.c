@@ -1,28 +1,36 @@
+#include <stddef.h>
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalremei <aalremei@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 14:04:11 by aalremei          #+#    #+#             */
-/*   Updated: 2024/12/20 17:07:26 by aalremei         ###   ########.fr       */
+/*   Created: 2024/12/20 16:43:15 by aalremei          #+#    #+#             */
+/*   Updated: 2024/12/20 16:43:30 by aalremei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+size_t	ft_strlen(const char *str)
 {
-	if (((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
-		return (1);
-	return (0);
+	size_t	count;
+
+	count = 0;
+	while (str[count] != 0)
+	{
+		count ++;
+	}
+	return (count);
 }
 
 /*
 int	main(void)
 {
-	char	c = 'd';
-	printf("%d\n", ft_isalpha(c));
-	return (0);
-}*/
+	char	str[] = "12684653";
+//	printf("%lu\n", strlen(str));
+	printf("%zu\n", ft_strlen(str));
+
+}
+*/

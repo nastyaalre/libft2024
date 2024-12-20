@@ -6,7 +6,7 @@
 /*   By: aalremei <aalremei@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:56:18 by aalremei          #+#    #+#             */
-/*   Updated: 2024/12/18 14:58:38 by aalremei         ###   ########.fr       */
+/*   Updated: 2024/12/20 17:08:40 by aalremei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
      two strings may overlap; the copy is always done in a non-destructive man-
      ner.
      The memmove() function returns the original value of dst.*/
+
+#include "libft.h"
 
 void	*ft_memmove(void *dest, void *src, size_t len)
 {

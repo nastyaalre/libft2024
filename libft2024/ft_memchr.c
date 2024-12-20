@@ -6,7 +6,7 @@
 /*   By: aalremei <aalremei@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:34:25 by aalremei          #+#    #+#             */
-/*   Updated: 2024/12/18 14:55:31 by aalremei         ###   ########.fr       */
+/*   Updated: 2024/12/20 17:08:20 by aalremei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
      unsigned char) in string s.
 	The memchr() function returns a pointer to the byte located, or NULL if no
      such byte exists within n bytes.*/
+
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int cr, size_t len)
 {

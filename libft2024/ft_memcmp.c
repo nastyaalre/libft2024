@@ -6,7 +6,7 @@
 /*   By: aalremei <aalremei@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:40:48 by aalremei          #+#    #+#             */
-/*   Updated: 2024/12/18 14:55:22 by aalremei         ###   ########.fr       */
+/*   Updated: 2024/12/20 17:08:33 by aalremei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
      wise returns the difference between the first two differing bytes (treated
      as unsigned char values, so that `\200' is greater than `\0', for example).
      Zero-length strings are always identical.   */
+
+#include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, size_t len)
 {

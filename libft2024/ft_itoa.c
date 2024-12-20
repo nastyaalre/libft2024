@@ -6,11 +6,11 @@
 /*   By: aalremei <aalremei@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:32:20 by aalremei          #+#    #+#             */
-/*   Updated: 2024/12/18 14:53:48 by aalremei         ###   ########.fr       */
+/*   Updated: 2024/12/20 17:07:48 by aalremei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>  
+#include "libft.h"
 
 static int	ft_length_count(int i)
 {

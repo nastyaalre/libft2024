@@ -6,7 +6,7 @@
 /*   By: aalremei <aalremei@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 14:00:40 by aalremei          #+#    #+#             */
-/*   Updated: 2024/12/18 14:55:36 by aalremei         ###   ########.fr       */
+/*   Updated: 2024/12/20 18:21:39 by aalremei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 that are size bytes of memory each and returns a pointer to the allocated 
 memory.  The allocated memory is filled with bytes of value zero.*/
 
+#include "libft.h"
+
 void	*ft_calloc(size_t i, size_t size)
 {
 	void			*p;
 
-	if (size && (SIZE_MAX / size < i))
+	if (size && SIZE_MAX / size < i)
 		return (NULL);
 	p = malloc(i * size);
 	if (!p)

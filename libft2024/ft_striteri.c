@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalremei <aalremei@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 14:04:11 by aalremei          #+#    #+#             */
-/*   Updated: 2024/12/20 17:07:26 by aalremei         ###   ########.fr       */
+/*   Created: 2024/12/20 16:31:41 by aalremei          #+#    #+#             */
+/*   Updated: 2024/12/20 17:09:15 by aalremei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*Applies the function ’f’ on each character of
+the string passed as argument, passing its index
+as first argument. Each character is passed by
+address to ’f’ to be modified if necessary.
+*/
+
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
-		return (1);
-	return (0);
-}
+	unsigned int	i;
 
-/*
-int	main(void)
-{
-	char	c = 'd';
-	printf("%d\n", ft_isalpha(c));
-	return (0);
-}*/
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
+}

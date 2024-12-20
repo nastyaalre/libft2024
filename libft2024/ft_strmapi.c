@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalremei <aalremei@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 14:04:11 by aalremei          #+#    #+#             */
-/*   Updated: 2024/12/20 17:07:26 by aalremei         ###   ########.fr       */
+/*   Created: 2024/12/20 16:43:54 by aalremei          #+#    #+#             */
+/*   Updated: 2024/12/20 17:09:29 by aalremei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if (((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
-		return (1);
-	return (0);
-}
+	char			*p;
+	unsigned int	i;
 
-/*
-int	main(void)
-{
-	char	c = 'd';
-	printf("%d\n", ft_isalpha(c));
-	return (0);
-}*/
+	i = 0;
+	if (!s)
+		return (NULL);
+	p = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (!p)
+		return (NULL);
+	while (s[i])
+	{
+		p[i] = f(i, s[i]);
+		i++;
+	}
+	p[i] = '\0';
+	return (p);
+}
